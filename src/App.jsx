@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavbarWeb from './components/navbar';
 import { Button, Card, Container, Form } from 'react-bootstrap';
 
 export default class App extends Component {
@@ -29,10 +30,13 @@ export default class App extends Component {
   render() {
     return (
       <div>
+        <NavbarWeb />
         <Container>
           <Form onClick={this.onSubmit}>
             <Form.Group controlId="formBasicEmail">
-              <Form.Label>Veuillez saisir votre recherche !</Form.Label>
+              <Form.Label>
+                Veuillez saisir votre recherche ! (Avec HAL)
+              </Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Rechercher..."

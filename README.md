@@ -1,3 +1,10 @@
+# Comment utiliser l'application
+
+Il faut d'abord avoir nodejs et npm d'installer sur la machine.
+Ensuite il faut faire un `npm install` à la racine du dossier afin d'installer les dépendances.
+Ensuite il faut faire un `npm start` afin de démarrer l'application.
+Il est nécessaire de l'utiliser sur Chrome.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
