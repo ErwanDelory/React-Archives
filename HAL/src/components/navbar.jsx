@@ -6,8 +6,8 @@ const NavbarWeb = () => {
     <Navbar bg="light" expand="lg">
       <Navbar.Brand href="/">HAL / arXiv App</Navbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link href="#home">HAL</Nav.Link>
-        <Nav.Link href="#link">arXiv</Nav.Link>
+        <Nav.Link href="/hal">HAL</Nav.Link>
+        <Nav.Link href="/arxiv">arXiv</Nav.Link>
       </Nav>
     </Navbar>
   );
