@@ -4,6 +4,6 @@ const enregistrement = require('../controllers/enregistrement');
 const router = express.Router();
 
 //Test
-router.post('/test', enregistrement.recherches);
+router.post('/enregistrement', enregistrement.recherches);
 
 module.exports = router;

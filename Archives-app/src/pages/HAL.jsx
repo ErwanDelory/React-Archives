@@ -22,9 +22,23 @@ export default class HAL extends Component {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.response.docs);
         this.setState({ data: data.response.docs });
       });
+
+    for (let i = 0; i < this.state.data.length; i++) {
+      fetch('http://localhost:5000/api/enregistrement', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          docid: this.state.data[i]?.docid,
+          label: this.state.data[i]?.label_s,
+          uri: this.state.data[i]?.uri_s,
+        }),
+      }).then((response) => response.json());
+    }
   };
 
   render() {

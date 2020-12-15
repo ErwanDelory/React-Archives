@@ -7,7 +7,11 @@ function recherches(req, res) {
 
   db.query(query, (err, result) => {
     if (err) {
-      throw err;
+      if (err.code === 'ER_PARSE_ERROR') {
+        console.log('erreur sur la forme du label');
+      } else {
+        throw err;
+      }
     }
     return res.status(200).json({
       message: 'Enregistrement Ok.',
